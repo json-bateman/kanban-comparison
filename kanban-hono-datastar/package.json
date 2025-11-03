@@ -1,0 +1,27 @@
+{
+  "name": "kanban-hono-datastar",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "BUN_ENV=development bun run --hot src/index.ts",
+    "build": "bun build src/index.ts --outdir ./dist --target bun",
+    "start": "bun run dist/index.js",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "bun run scripts/migrate.ts",
+    "db:seed": "bun run scripts/seed.ts",
+    "css:build": "./node_modules/.bin/tailwindcss -i src/input.css -o static/style.css",
+    "css:watch": "./node_modules/.bin/tailwindcss -i src/input.css -o static/style.css --watch"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.44.7",
+    "hono": "^4.6.14",
+    "valibot": "^1.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.16",
+    "bun-types": "latest",
+    "daisyui": "^5.3.10",
+    "drizzle-kit": "^0.31.6",
+    "tailwindcss": "^4.1.16"
+  }
+}
