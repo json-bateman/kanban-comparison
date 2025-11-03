@@ -1,3 +1,6 @@
+.git
+.gitignore
+*.md
 .DS_Store
 *.env*
 tmp/
@@ -7,10 +10,13 @@ __debug
 .sqlfluff
 **/*_templ.go
 **/style.css
-sqlite.db
+*.db
+*.db-shm
+*.db-wal
 node_modules
 .task/
 .serena
 *.log
 data
 *bin*
+dist
