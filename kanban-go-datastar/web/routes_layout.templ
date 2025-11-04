@@ -11,11 +11,9 @@ templ BasePage(title string) {
 			<!-- Sync load main CSS (Tailwind only) -->
 			<link href={ StaticPath("style.css") } rel="stylesheet"/>
 			<!-- Async load daisyui from CDN -->
-			<link href="https://cdn.jsdelivr.net/npm/daisyui@5.3.0/dist/full.min.css" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;"/>
-			<noscript><link href="https://cdn.jsdelivr.net/npm/daisyui@5.3.0/dist/full.min.css" rel="stylesheet"/></noscript>
+			<link href="https://cdn.jsdelivr.net/npm/daisyui@5" type="text/css" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;"/>
 			<!-- Async load charts.css from CDN -->
 			<link href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;"/>
-			<noscript><link href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css" rel="stylesheet"/></noscript>
 			<link href={ StaticPath("favicon.png") } rel="icon" type="image/png"/>
 			<title>{ title }</title>
 			<!-- Datastar minified -->

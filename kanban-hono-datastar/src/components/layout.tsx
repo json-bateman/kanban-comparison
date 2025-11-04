@@ -16,13 +16,13 @@ export function BasePage({
         <link href="/static/style.css" rel="stylesheet" />
         {/* Async load DaisyUI from CDN */}
         <link
-          href="https://cdn.jsdelivr.net/npm/daisyui@5.3.0/dist/full.min.css"
+          href="https://cdn.jsdelivr.net/npm/daisyui@5"
+          type="text/css"
           rel="stylesheet"
           media="print"
           onload="this.media='all'; this.onload=null;"
         />
         {/* Async load charts.css from CDN */}
-
         <link
           href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css"
           rel="stylesheet"
