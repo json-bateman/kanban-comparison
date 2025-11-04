@@ -7,7 +7,7 @@
     "build": "task build",
     "start": "task build && ./bin/kanban-datastar",
     "preview": "./bin/kanban-datastar",
-    "setup": "task build",
+    "setup": "go install github.com/a-h/templ/cmd/templ@latest && go install github.com/delaneyj/toolbelt/sqlc-gen-zombiezen@latest && go install github.com/go-task/task/v3/cmd/task@latest && go install github.com/sqlc-dev/sqlc/cmd/sqlc@latest",
     "clean": "task clean"
   },
   "keywords": [
