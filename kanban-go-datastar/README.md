@@ -1,4 +1,4 @@
-## <h1 align="center">Kanban-Datastar</h1>
+## <h1 align="center">kanban-go-datastar</h1>
 
 ### Why make this? 
 We want to dragrace datastar against some frontend frameworks. This is a nieve implementation of datastar in golang, standard project using templ and tailwind, just to see what happens!
@@ -13,11 +13,10 @@ Then run `go tool task -w`.  This will automatically install the task tool for y
 ### Setting .env variables (loaded by `pkg/config/settings.go`)
 
 `DATASTAR_IS_DEV` - set to `true` to enable dev mode (default: `false`)
-`DATASTAR_PORT` - set to the port you want the server to run on (default: `7331`)
-
+`DATASTAR_PORT` - set to the port you want the server to run on (default: `3012`)
 
 ### More info
 
-If you want to reset the project simply delete the generated `sqlite.db` file, everything will regenerate from the second migration file `seed`.
+If you want to reset the project simply delete the generated `kanban.db` file, everything will regenerate from migration files, that include a seed of the data.
 
 HUUUUUUGE shoutout to [Loren Sean Steward](https://github.com/lorenseanstewart/kanban-comparison) for making this awesome project!

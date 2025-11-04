@@ -58,6 +58,7 @@ app.config.timestamp_*.js
 .classpath
 *.launch
 .settings/
+.vscode
 
 # Temp
 gitignore

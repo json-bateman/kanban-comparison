@@ -54,6 +54,6 @@ COPY --from=compressor /compress/kanban-datastar .
 
 USER appuser
 
-EXPOSE 7331
+EXPOSE 3012
 
 CMD ["./kanban-datastar"]

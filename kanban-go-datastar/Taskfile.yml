@@ -60,7 +60,7 @@ tasks:
   docker:run:
     desc: Run Docker container
     cmds:
-      - docker run --rm -p 7331:7331 kanban-datastar:latest
+      - docker run --rm -p 3012:3012 kanban-datastar:latest
 
   docker:
     desc: Build and run Docker container

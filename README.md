@@ -70,7 +70,6 @@ Then install dependencies for each framework implementation:
 ```bash
 cd kanban-analog && npm install
 cd ../kanban-htmx && npm install
-cd ../kanban-datastar && npm install
 cd ../kanban-marko && npm install
 cd ../kanban-nextjs && npm install
 cd ../kanban-nuxt && npm install
@@ -79,6 +78,9 @@ cd ../kanban-solidstart && npm install
 cd ../kanban-sveltekit && npm install
 cd ../kanban-tanstack && npm install
 cd ../kanban-tanstack-solid && npm install
+cd ../kanban-go-datastar && npm install
+cd ../kanban-hono-datastar && bun install
+cd ..
 ```
 ## Setting up all apps
 

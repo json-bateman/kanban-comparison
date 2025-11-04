@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "BUN_ENV=development bun run --hot src/index.ts",
     "build": "bun build src/index.ts --outdir ./dist --target bun",
-    "start": "bun run dist/index.js",
+    "start": "PORT=3011 bun run dist/index.js",
+    "setup": "bun run db:migrate && bun run db:seed && bun run css:build",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "bun run scripts/migrate.ts",
     "db:seed": "bun run scripts/seed.ts",
@@ -15,7 +16,8 @@
   "dependencies": {
     "drizzle-orm": "^0.44.7",
     "hono": "^4.6.14",
-    "valibot": "^1.1.0"
+    "valibot": "^1.1.0",
+    "charts.css": "^1.2.0"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.16",
