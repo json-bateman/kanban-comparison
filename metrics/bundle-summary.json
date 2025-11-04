@@ -1,7 +1,21 @@
 {
-  "timestamp": "2025-11-02T22:33:11.692Z",
+  "timestamp": "2025-11-04T17:40:25.991Z",
   "note": "Bundle sizes use raw (uncompressed) as primary, compressed in parentheses",
   "boardPage": [
+    {
+      "framework": "Go-Datastar",
+      "jsUncompressed": 24148,
+      "jsTransferred": 24410,
+      "compressionRatio": -1,
+      "requests": 0
+    },
+    {
+      "framework": "Hono-Datastar",
+      "jsUncompressed": 24148,
+      "jsTransferred": 24273,
+      "compressionRatio": -1,
+      "requests": 0
+    },
     {
       "framework": "Marko",
       "jsUncompressed": 90916,
@@ -10,16 +24,9 @@
       "requests": 0
     },
     {
-      "framework": "Qwik",
-      "jsUncompressed": 117597,
-      "jsTransferred": 59774,
-      "compressionRatio": 49,
-      "requests": 0
-    },
-    {
       "framework": "SvelteKit",
-      "jsUncompressed": 128192,
-      "jsTransferred": 55428,
+      "jsUncompressed": 124022,
+      "jsTransferred": 53833,
       "compressionRatio": 57,
       "requests": 0
     },
@@ -32,15 +39,15 @@
     },
     {
       "framework": "SolidStart",
-      "jsUncompressed": 131692,
-      "jsTransferred": 42493,
+      "jsUncompressed": 131762,
+      "jsTransferred": 42495,
       "compressionRatio": 68,
       "requests": 0
     },
     {
       "framework": "TanStack Start + Solid",
-      "jsUncompressed": 187023,
-      "jsTransferred": 61866,
+      "jsUncompressed": 185195,
+      "jsTransferred": 61239,
       "compressionRatio": 67,
       "requests": 0
     },
@@ -53,22 +60,15 @@
     },
     {
       "framework": "TanStack Start",
-      "jsUncompressed": 382609,
-      "jsTransferred": 121052,
+      "jsUncompressed": 381516,
+      "jsTransferred": 120920,
       "compressionRatio": 68,
       "requests": 0
     },
     {
-      "framework": "Analog",
-      "jsUncompressed": 385377,
-      "jsTransferred": 106361,
-      "compressionRatio": 72,
-      "requests": 0
-    },
-    {
       "framework": "Next.js",
-      "jsUncompressed": 577251,
-      "jsTransferred": 180333,
+      "jsUncompressed": 563115,
+      "jsTransferred": 174787,
       "compressionRatio": 69,
       "requests": 0
     }
@@ -82,17 +82,24 @@
       "requests": 0
     },
     {
-      "framework": "SolidStart",
-      "jsUncompressed": 85899,
-      "jsTransferred": 30562,
-      "compressionRatio": 64,
+      "framework": "Go-Datastar",
+      "jsUncompressed": 24148,
+      "jsTransferred": 24410,
+      "compressionRatio": -1,
       "requests": 0
     },
     {
-      "framework": "Qwik",
-      "jsUncompressed": 88544,
-      "jsTransferred": 43557,
-      "compressionRatio": 51,
+      "framework": "Hono-Datastar",
+      "jsUncompressed": 24148,
+      "jsTransferred": 24273,
+      "compressionRatio": -1,
+      "requests": 0
+    },
+    {
+      "framework": "SolidStart",
+      "jsUncompressed": 85969,
+      "jsTransferred": 30526,
+      "compressionRatio": 64,
       "requests": 0
     },
     {
@@ -104,15 +111,15 @@
     },
     {
       "framework": "SvelteKit",
-      "jsUncompressed": 105914,
-      "jsTransferred": 48931,
-      "compressionRatio": 54,
+      "jsUncompressed": 101744,
+      "jsTransferred": 47337,
+      "compressionRatio": 53,
       "requests": 0
     },
     {
       "framework": "TanStack Start + Solid",
-      "jsUncompressed": 153019,
-      "jsTransferred": 52036,
+      "jsUncompressed": 147871,
+      "jsTransferred": 50113,
       "compressionRatio": 66,
       "requests": 0
     },
@@ -125,22 +132,15 @@
     },
     {
       "framework": "TanStack Start",
-      "jsUncompressed": 316822,
-      "jsTransferred": 100698,
+      "jsUncompressed": 315729,
+      "jsTransferred": 100563,
       "compressionRatio": 68,
       "requests": 0
     },
     {
-      "framework": "Analog",
-      "jsUncompressed": 385377,
-      "jsTransferred": 106361,
-      "compressionRatio": 72,
-      "requests": 0
-    },
-    {
       "framework": "Next.js",
-      "jsUncompressed": 497757,
-      "jsTransferred": 154539,
+      "jsUncompressed": 478186,
+      "jsTransferred": 146361,
       "compressionRatio": 69,
       "requests": 0
     }
