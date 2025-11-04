@@ -1,0 +1,81 @@
+version: '3'
+
+interval: 100ms
+
+tasks:
+  npm:install:
+    sources:
+      - package.json
+      - package-lock.json
+    generates:
+      - node_modules/.package-lock.json
+    cmd: npm install
+
+  css:
+    deps:
+      - npm:install
+    sources:
+      - ./web/input.css
+      - ./web/**/*.templ
+      - ./web/**/*.go
+    generates:
+      - ./web/static/style.css
+    cmd: npx @tailwindcss/cli -i ./web/input.css -o ./web/static/style.css
+
+  templ:
+    sources:
+      - ./**/*.templ
+    generates:
+      - ./**/*_templ.go
+    cmd: go tool templ generate
+
+  sqlc:
+    desc: Generate sqlc query helpers
+    dir: sql
+    sources:
+      - ./**/*.sql
+    generates:
+      - zz/*.go
+    cmds:
+      - go tool sqlc generate
+
+  build:
+    method: none
+    sources: 
+      - ./**/*.go
+      - exclude: ./**/*_templ.go
+    deps: 
+      - templ
+      - css
+      - sqlc
+    cmds:
+      - go mod tidy
+      - go build -o bin/kanban-datastar cmd/main.go 
+
+  docker:build:
+    desc: Build Docker image with UPX compression
+    cmds:
+      - docker build -t kanban-datastar:latest .
+
+  docker:run:
+    desc: Run Docker container
+    cmds:
+      - docker run --rm -p 7331:7331 kanban-datastar:latest
+
+  docker:
+    desc: Build and run Docker container
+    deps:
+      - docker:build
+    cmds:
+      - task: docker:run
+
+  cloc:
+    desc: Count lines of code with templ as Go
+    cmds:
+      - cloc --vcs=git --force-lang="Go",templ .
+
+  default:
+    deps:
+      - build
+    cmds:
+      - ./bin/kanban-datastar
