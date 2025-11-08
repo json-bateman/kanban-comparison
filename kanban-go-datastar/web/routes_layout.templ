@@ -22,10 +22,10 @@ templ BasePage(title string) {
             -->
 		</head>
 		<body>
-			{ children... }
 			if kanban.Env.IsDev {
 				<div id="hotreload" data-init="@get('/hotreload', {retryMaxCount: 1000,retryInterval:20, retryMaxWaitMs:200})"></div>
 			}
+			{ children... }
 		</body>
 	</html>
 }
