@@ -4,6 +4,7 @@ interval: 100ms
 
 tasks:
   npm:install:
+    method: checksum
     sources:
       - package.json
       - package-lock.json
@@ -73,6 +74,13 @@ tasks:
     desc: Count lines of code with templ as Go
     cmds:
       - cloc --vcs=git --force-lang="Go",templ .
+
+  dev:
+    desc: Run with live reload using air
+    deps:
+      - build
+    cmds:
+      - air
 
   default:
     deps:
