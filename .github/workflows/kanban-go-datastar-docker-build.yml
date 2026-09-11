@@ -1,8 +1,11 @@
-name: Build and Push Docker Image
+name: kanban-go-datastar - Build and Push Docker Image
 
 on:
   push:
     branches: [main]
+    paths:
+      - "kanban-go-datastar/**"
+      - ".github/workflows/kanban-go-datastar-docker-build.yml"
 
 jobs:
   build:
@@ -23,7 +26,8 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
-          context: .
+          context: ./kanban-go-datastar
+          file: ./kanban-go-datastar/Dockerfile
           push: true
           platforms: linux/amd64
           tags: |
