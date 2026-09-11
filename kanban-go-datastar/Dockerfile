@@ -14,14 +14,16 @@ RUN npm install
 COPY go.mod go.sum ./
 RUN go mod download
 
-# Install sqlc-gen-zombiezen
-RUN go install github.com/delaneyj/toolbelt/sqlc-gen-zombiezen@latest
+# Install sqlc-gen-zombiezen (version pinned by go.mod, not @latest,
+# so generated code matches what's committed in sql/zz)
+RUN go install github.com/delaneyj/toolbelt/sqlc-gen-zombiezen
 
 
 # Copy source
 COPY . .
 
-# Run task build to generate all files and build binary
+# Run task build to generate all files and build binary (linux/amd64 only)
+ENV GOOS=linux GOARCH=amd64 CGO_ENABLED=1
 RUN go tool task build
 
 # UPX compression stage

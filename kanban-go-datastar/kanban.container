@@ -1,0 +1,12 @@
+[Container]
+Image=docker.io/jsonbateman/kanban:latest
+ContainerName=kanban
+PublishPort=127.0.0.1:3013:3012
+Volume=kanban-data:/app/data
+Label=io.containers.autoupdate=registry
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target
