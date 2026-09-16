@@ -40,7 +40,6 @@ func setupRoutes(db *toolbelt.Database) chi.Router {
 
 	// Static and utility routes
 	r.Handle("/static/*", hashfs.FileServer(StaticSys))
-	r.Get("/hotreload", hotReload())
 	r.Get("/", home(db))
 
 	// Board routes
@@ -58,18 +57,6 @@ func setupRoutes(db *toolbelt.Database) chi.Router {
 }
 
 // Route Handlers
-
-func hotReload() http.HandlerFunc {
-	var hotReloadOnlyOnce sync.Once
-	return func(w http.ResponseWriter, r *http.Request) {
-		sse := datastar.NewSSE(w, r)
-		hotReloadOnlyOnce.Do(func() {
-			sse.ExecuteScript("window.location.reload()")
-		})
-		<-r.Context().Done()
-	}
-}
-
 func home(db *toolbelt.Database) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		renderAllBoards(w, r, db)

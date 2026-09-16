@@ -1,7 +1,5 @@
 package web 
 
-import "kanban"
-
 templ BasePage(title string) {
 	<!DOCTYPE html>
 	<html lang="en">
@@ -22,9 +20,6 @@ templ BasePage(title string) {
             -->
 		</head>
 		<body>
-			if kanban.Env.IsDev {
-				<div id="hotreload" data-init="@get('/hotreload', {retryMaxCount: 1000,retryInterval:20, retryMaxWaitMs:200})"></div>
-			}
 			{ children... }
 		</body>
 	</html>
